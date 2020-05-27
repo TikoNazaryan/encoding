@@ -1,0 +1,25 @@
+AddDefaultCharset utf-8
+ErrorDocument 404 .
+
+RewriteEngine On
+
+#For Get Css Or Js File Need Write css/***.css or js/****.js 
+RewriteRule ^css/([a-zA-z0-9._]+)?$ css/$1 [QSA,L]
+RewriteRule ^js/([a-zA-z0-9._]+)?$ js/$1 [QSA,L]
+
+
+
+#This For All Files And directorys without js and css
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-z0-9_.]+)?$ index.php?G1=$1 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-z0-9_.]+)/([a-zA-z0-9_.]+)?$ index.php?G1=$1&G2=$2 [QSA,L]
+RewriteRule ^([a-zA-z0-9_.]+)/([a-zA-z0-9_.]+)/([a-zA-z0-9_.]+)?$ index.php?G1=$1&G2=$2&G3=$3 [QSA,L]
+
+<Files "constructor.php">
+Order Allow,Deny
+Deny from all
+</Files>
+

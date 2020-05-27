@@ -1,3 +1,3 @@
 <?php
-    echo 123465;
+    include "constructor.php";
 ?>
