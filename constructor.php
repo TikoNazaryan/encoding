@@ -25,7 +25,7 @@
         {
             case 0:
                 include_once("classes/caesar.class.php");
-                $Algorithm = new Caesar();
+                $Algorithm = new Caesar(53);
             break;
             case 1:
                 include_once("classes/substitution.class.php");
