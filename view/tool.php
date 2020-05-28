@@ -17,16 +17,16 @@
                 <div class="field">
                     <label><span>Choice Algorithm</span></label>
                     <label>
-                        1: 
-                        <input type="radio" checked name="algorithm">
+                        Caesar :  
+                        <input type="radio" checked name="algorithm" data-type="0">
                     </label>
                     <label>
-                        2: 
-                        <input type="radio" name="algorithm">
+                        Substitution: 
+                        <input type="radio" name="algorithm" data-type="1">
                     </label>
                     <label>
-                        3: 
-                        <input type="radio" name="algorithm">
+                        Mixed: 
+                        <input type="radio" name="algorithm" data-type="2">
                     </label>
                 </div>
                 <div class="field">

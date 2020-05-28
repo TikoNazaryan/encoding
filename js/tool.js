@@ -3,12 +3,14 @@ $("#encode").click(function(){
     $.ajax({
         url: "ajax",
         data: {
-            text: "text",
-            algorithm: 1
+            text: $("#text-for-encode").val(),
+            algorithm: $('[name="algorithm"]:checked').attr("data-type")
         },
         type: "POST",
         success: function(data)
         {
+            console.log(data);
+            return;
             var response = JSON.parse(data);
             if(response.status = 200)
                 $("#encoded_text").text(response.msg);
